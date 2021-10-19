@@ -1,5 +1,5 @@
-import {fileDown} from './file/file'
+import { fileDown } from './file/index';
 
 export default {
-    fileDown
-}
+  fileDown,
+};
