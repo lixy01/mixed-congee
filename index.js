@@ -1,5 +1,9 @@
-import file from './src/utils/index';
+import { fileDown } from '@/utils/file';
+import { arrDeepEach } from '@/utils/array';
+import { objEach } from '@/utils/object';
 
 export default {
-  file,
+  fileDown,
+  arrDeepEach,
+  objEach,
 };

@@ -1,24 +1,18 @@
 <template>
   <div>
-    {{ name }}
+    app
   </div>
 </template>
 <script>
-export default {
+import { getCurrentInstance, defineComponent } from 'vue';
+
+export default defineComponent({
   name: 'App',
-  data() {
-    return {
-      name: '12',
-    };
-  },
   setup() {
-    const testFunction = () => {
-      console.log('滚!!!');
-    };
-    return {
-      testFunction,
-    };
+    const current = getCurrentInstance();
+    current.proxy.$mc.objEach({ a: '1' }, (v, k) => {
+    });
   },
-};
+});
 </script>
 <style></style>

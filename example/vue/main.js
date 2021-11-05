@@ -1,5 +1,7 @@
-import { createApp } from 'vue'; // Vue 3.x 引入 vue 的形式
-import App from './src/App.vue'; // 引入 APP 页面组建
+import { createApp } from 'vue';
+import App from './src/App.vue';
+import mc from '../../index';
 
-const app = createApp(App); // 通过 createApp 初始化 app
-app.mount('#root'); // 将页面挂载到 root 节点
+const app = createApp(App);
+app.config.globalProperties.$mc = mc;
+app.mount('#root');

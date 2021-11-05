@@ -8,9 +8,8 @@ import { cloneDeep } from 'loadsh';
  * @param options
  * @returns {*}
  */
-export function recursion(arrs, returnCb, options = {}) {
+export function arrDeepEach(arrs, returnCb, options = {}) {
   options = { children: 'children', cloneDeep: true, ...options };
-
   if (options.cloneDeep) {
     arrs = cloneDeep(arrs);
   }
